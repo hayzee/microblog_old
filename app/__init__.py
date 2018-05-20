@@ -5,6 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from logging.handlers import SMTPHandler, RotatingFileHandler
 from flask_bootstrap import Bootstrap
+from flask_moment import Moment
 
 import logging
 
@@ -36,6 +37,8 @@ def load_user(user_id):
 mail = Mail(app)
 
 bootstrap = Bootstrap(app)
+
+moment = Moment(app)
 
 if not app.debug:
 
